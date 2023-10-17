@@ -11,7 +11,10 @@ export default {
       },
       colors:{
         'warhouse-red': '#f21326'
-      }
+      },
+      listStyleImage: {
+        square: 'url("/rectangle.svg")',
+      },
     },
   },
   plugins: [],
