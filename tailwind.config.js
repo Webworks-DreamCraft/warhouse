@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'libre-basker': ['"Libre Baskerville"']
+      },
+      colors:{
+        'warhouse-red': '#f21326'
+      }
+    },
   },
   plugins: [],
 }
