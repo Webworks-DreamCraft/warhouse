@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: rgb(3 7 18);
+}
+
 @layer base {
   ul {
     list-style: square;

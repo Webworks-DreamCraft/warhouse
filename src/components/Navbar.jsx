@@ -2,7 +2,7 @@ import warhouseSVG from '/warhouselogo.svg'
 
 const Navbar = () => {
   return (
-    <div className='flex flex-row bg-gray-950 text-gray-50 justify-between py-3.5 border-b-2 border-b-slate-50 font-libre-basker items-center text-base'>
+    <div className='flex flex-row sticky top-0 bg-gray-950 text-gray-50 justify-between py-3.5 border-b-2 border-b-slate-50 font-libre-basker items-center text-base'>
             <a href="#"><img className="hover:bg-warhouse-red ml-10 object-fit w-14" src={warhouseSVG} /></a>
             <nav className="flex flex-row mx-10">
 
