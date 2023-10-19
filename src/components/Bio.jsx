@@ -29,7 +29,7 @@ const Bio = () => {
           maybe, just maybe, making it sound halfway decent.
         </p>
       </div>
-      <div className="sm:w-[48%] pb-10 sm:pb-0 sm:flex items-center">
+      <div className="sm:w-[48%] pb-10 sm:pb-0 sm:flex items-center justify-end">
         <img
           src={JohnGuitar}
           className="w-2/3 m-auto sm:w-full sm:max-w-[500px] sm:m-0"
