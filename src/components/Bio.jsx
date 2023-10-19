@@ -3,7 +3,7 @@ import Target from "../../public/target2.svg";
 
 const Bio = () => {
   return (
-    <div className="box-border mx-auto text-gray-50 font-libre-basker container pt-5 pb-5 px-5 sm:flex sm:justify-between lg:pt-10 lg:pb-10 lg:pr-10 lg:pl-10">
+    <div className="box-border text-gray-50 font-libre-basker pt-5 pb-5 px-5 sm:flex sm:justify-between lg:pt-10 lg:pb-10 lg:pr-10 lg:pl-10">
       <div className="sm:w-[48%] text-center sm:text-left">
         <h2 className="relative px-10 pt-7 mb-5 inline-block font-libre-franklin text-5xl font-bold sm:text-7xl sm:pl-0 sm:pr-14 sm:pt-12">
           <img
