@@ -16,6 +16,9 @@ export default {
         square: 'url("/rectangle.svg")',
       },
     },
+    variants: {
+    fill: ['hover', 'focus'],
+  },
   },
   plugins: [],
 }
