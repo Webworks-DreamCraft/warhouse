@@ -1,4 +1,5 @@
 import warhouseSVG from "/warhouselogo.svg";
+import logo from "/Logo.svg"
 
 const Navbar = ({ isShowing, setIsShowing }) => {
 

@@ -78,7 +78,7 @@ const SlideOverLayer = ({ children }) => (
     leaveFrom="translate-x-0"
     leaveTo="translate-x-full"
   >
-    <section className="fixed inset-0 overflow-hidden bg-gray-950">
+    <section className="fixed flex flex-col h-fit inset-0 overflow-hidden bg-gray-950">
       {children}
     </section>
   </Transition.Child>
