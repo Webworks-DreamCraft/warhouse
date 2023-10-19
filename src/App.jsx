@@ -1,3 +1,4 @@
+import Bio from "./components/Bio";
 import { useState } from 'react';
 import { Transition } from "@headlessui/react";
 import Navbar from './components/Navbar';
@@ -9,9 +10,13 @@ const App = () => {
     <section className='bg-gray-950'>
       <Navbar isShowing={isShowing} setIsShowing={setIsShowing}/>
       <NavModal isShowing={isShowing} setIsShowing={setIsShowing}/>
-      <h1 className="bg-gray-950 text-gray-50">webworks</h1>
+      <div className="bg-gray-950">
+        <div className="container mx-auto">
+          <Bio />
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default App
+export default App;
