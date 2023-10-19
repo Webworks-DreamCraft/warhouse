@@ -1,7 +1,8 @@
-import Navbar from './components/Navbar'
+import { useState } from 'react';
+import Navbar from './components/Navbar';
 
 const App = () => {
-
+  const [modal, setModal] = useState(false);
   return (
     <section className='bg-gray-950'>
       <Navbar />
