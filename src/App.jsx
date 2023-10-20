@@ -1,11 +1,12 @@
 import Bio from "./components/Bio";
 import { useState } from "react";
-import { Transition } from "@headlessui/react";
 import Navbar from "./components/Navbar";
 import NavModal from "./components/NavModal";
 
 const App = () => {
+
   const [isShowing, setIsShowing] = useState(false);
+  
   return (
     <>
       <Navbar isShowing={isShowing} setIsShowing={setIsShowing} />
