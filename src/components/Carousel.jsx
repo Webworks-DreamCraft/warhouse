@@ -1,4 +1,6 @@
+import Slider from "./Slider";
 import Target from "../../public/target2.svg";
+import data from "./swiper_data";
 
 const Carousel = () => {
   return (
@@ -13,6 +15,7 @@ const Carousel = () => {
       <p className="text-center mb-8 text-lg font-libre-basker sm:text-left sm:text-sm sm:mb-4">
         Recorded, Mixed, or Mastered
       </p>
+      <Slider records={data} />
     </section>
   );
 };
