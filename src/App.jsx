@@ -7,10 +7,20 @@ const App = () => {
 
   const [isModalShowing, setIsModalShowing] = useState(false);
   
+  const openModal = () => {
+    setIsModalShowing(!isModalShowing);
+    document.body.classList.add('overflow-hidden');
+  }
+
+  const closeModal = () => {
+    setIsModalShowing(!isModalShowing);
+    document.body.classList.remove('overflow-hidden');
+  }
+  
   return (
     <>
-      <Navbar isModalShowing={isModalShowing} setIsModalShowing={setIsModalShowing} />
-      <NavModal isModalShowing={isModalShowing} setIsModalShowing={setIsModalShowing} />
+      <Navbar openModal={openModal} />
+      <NavModal isModalShowing={isModalShowing} closeModal={closeModal} />
       <div className="">
         <div className="container mx-auto bg-gray-950">
           <Bio />

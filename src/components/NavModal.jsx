@@ -2,14 +2,7 @@ import { Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import WarhouseLogo from "./WarhouseLogo";
 
-const NavModal = ({ isModalShowing, setIsModalShowing }) => {
-
-  const closeModal = () => {
-    setIsModalShowing(!isModalShowing);
-    document.body.classList.remove('overflow-hidden');
-  }
-
-  return (
+const NavModal = ({ isModalShowing, closeModal }) => (
     <Transition.Root show={isModalShowing}>
       <SlideOverLayer>
         <section className="flex flex-row text-gray-50 justify-end py-4 border-b-2 border-b-slate-50 items-center">
@@ -70,7 +63,6 @@ const NavModal = ({ isModalShowing, setIsModalShowing }) => {
       </SlideOverLayer>
     </Transition.Root>
   );
-};
 
 export default NavModal;
 

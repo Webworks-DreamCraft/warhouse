@@ -1,13 +1,6 @@
 import WarhouseLogo from "./WarhouseLogo";
 
-const Navbar = ({ isModalShowing, setIsModalShowing }) => {
-
-  const openModal = () => {
-    setIsModalShowing(!isModalShowing);
-    document.body.classList.add('overflow-hidden');
-  }
-
-  return (
+const Navbar = ({ openModal }) => (
     <section className="flex flex-row sticky top-0 bg-gray-950 text-gray-50 justify-between py-2 border-b-2 border-b-slate-50 antialiased font-libre-basker items-center text-base z-10">
       <a href="#">
         <WarhouseLogo width="57" height="52" classes="ml-10 hover:fill-warhouse-red fill-slate-50"/> 
@@ -44,6 +37,5 @@ const Navbar = ({ isModalShowing, setIsModalShowing }) => {
       </nav>
     </section>
   );
-};
 
 export default Navbar;
