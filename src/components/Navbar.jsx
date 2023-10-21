@@ -1,4 +1,4 @@
-import WarhouseLogo from "./WarhouseLogo";
+import WarhouseLogo from "./svg/WarhouseLogo";
 
 const Navbar = ({ openModal }) => (
     <section className="flex flex-row sticky top-0 bg-gray-950 text-gray-50 justify-between py-2 border-b-2 border-b-slate-50 antialiased font-libre-basker items-center text-base z-10">
