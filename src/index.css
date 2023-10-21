@@ -1,5 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&family=Karla:wght@300;400;500;700;800&family=Libre+Baskerville:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&family=Karla:wght@300;400;500;700;800&family=Libre+Baskerville:wght@400;700&display=swap");
+body {
+  background-color: rgb(3 7 18);
+}
+
+@layer base {
+  ul {
+    list-style: square;
+  }
+}
+
+.modalLogo {
+  max-height: 35%;
+  width: auto;
+}
