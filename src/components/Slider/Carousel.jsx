@@ -1,5 +1,5 @@
 import Slider from "./Slider";
-import Target from "../../public/target2.svg";
+import Target from "../../../public/target2.svg";
 import data from "./swiper_data";
 
 const Carousel = () => {

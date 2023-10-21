@@ -1,5 +1,5 @@
 import Bio from "./components/Bio";
-import Carousel from "./components/Carousel";
+import Carousel from "./components/Slider/Carousel";
 
 const App = () => {
   return (
