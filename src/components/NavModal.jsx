@@ -1,15 +1,15 @@
 import { Transition } from "@headlessui/react";
 import { Fragment } from "react";
 
-const NavModal = ({ isShowing, setIsShowing }) => {
+const NavModal = ({ isModalShowing, setIsModalShowing }) => {
 
   const closeModal = () => {
-    setIsShowing(!isShowing);
+    setIsModalShowing(!isModalShowing);
     document.body.classList.remove('overflow-hidden');
   }
 
   return (
-    <Transition.Root show={isShowing}>
+    <Transition.Root show={isModalShowing}>
       <SlideOverLayer>
         <section className="flex flex-row text-gray-50 justify-end py-4 border-b-2 border-b-slate-50 items-center">
           {/* X */}

@@ -5,12 +5,12 @@ import NavModal from "./components/NavModal";
 
 const App = () => {
 
-  const [isShowing, setIsShowing] = useState(false);
+  const [isModalShowing, setIsModalShowing] = useState(false);
   
   return (
     <>
-      <Navbar isShowing={isShowing} setIsShowing={setIsShowing} />
-      <NavModal isShowing={isShowing} setIsShowing={setIsShowing} />
+      <Navbar isModalShowing={isModalShowing} setIsModalShowing={setIsModalShowing} />
+      <NavModal isModalShowing={isModalShowing} setIsModalShowing={setIsModalShowing} />
       <div className="">
         <div className="container mx-auto bg-gray-950">
           <Bio />

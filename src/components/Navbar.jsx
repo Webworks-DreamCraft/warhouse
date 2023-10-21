@@ -1,7 +1,7 @@
-const Navbar = ({ isShowing, setIsShowing }) => {
+const Navbar = ({ isModalShowing, setIsModalShowing }) => {
 
   const openModal = () => {
-    setIsShowing(!isShowing);
+    setIsModalShowing(!isModalShowing);
     document.body.classList.add('overflow-hidden');
   }
 
