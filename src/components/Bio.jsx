@@ -1,5 +1,5 @@
-import JohnGuitar from "../../public/jh_guitar.png";
-import Target from "../../public/target2.svg";
+import JohnGuitar from "/jh_guitar.png";
+import Target from "/target2.svg";
 
 const Bio = () => (
   <div className="box-border text-gray-50 font-libre-basker pt-5 pb-5 px-5 sm:flex sm:justify-between lg:pt-10 lg:pb-10 lg:pr-10 lg:pl-10">

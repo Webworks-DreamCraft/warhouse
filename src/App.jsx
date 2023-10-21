@@ -1,11 +1,28 @@
 import Bio from "./components/Bio";
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import NavModal from "./components/NavModal";
 
 const App = () => {
+
+  const [isModalShowing, setIsModalShowing] = useState(false);
+  
+  const openModal = () => {
+    setIsModalShowing(!isModalShowing);
+    document.body.classList.add('overflow-hidden');
+  }
+
+  const closeModal = () => {
+    setIsModalShowing(!isModalShowing);
+    document.body.classList.remove('overflow-hidden');
+  }
+  
   return (
     <>
-      <h1 className="bg-slate-600">webworks</h1>
-      <div className="bg-gray-950">
-        <div className="container mx-auto">
+      <Navbar openModal={openModal} />
+      <NavModal isModalShowing={isModalShowing} closeModal={closeModal} />
+      <div className="">
+        <div className="container mx-auto bg-gray-950">
           <Bio />
         </div>
       </div>

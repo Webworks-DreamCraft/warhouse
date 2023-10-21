@@ -1,7 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      'xs': '376px',
+      ...defaultTheme.screens,
+    },
     extend: {
       fontFamily: {
         "libre-basker": ['"Libre Baskerville"'],
