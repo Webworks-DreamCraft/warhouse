@@ -23,8 +23,8 @@ const App = () => {
       <NavModal isModalShowing={isModalShowing} closeModal={closeModal} />
       <div className="">
         <div className="container mx-auto bg-gray-950">
-          <Bio />
           <Carousel />
+          <Bio />
         </div>
       </div>
     </>

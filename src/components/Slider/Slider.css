@@ -1,32 +1,52 @@
-/* These styles work */
+/* Swiper button and navigation container styles */
+.swiper-functions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.custom-swiper-navigation {
+  display: flex;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: auto !important;
+  left: auto !important;
+  top: auto !important;
+  width: auto !important;
+  position: relative !important;
+  text-align: left;
+}
+
+/* Custom navigation button styles */
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin: 0 5px;
+  border: 1px solid #f6f6f6;
+  border-radius: 50%;
+}
+
+.swiper-button-disabled {
+  opacity: 0.2;
+}
+
+/* Pagination styles */
+
 .swiper-pagination-bullet {
-  background-color: white !important;
+  background-color: #f6f6f6 !important;
+  opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
   background-color: #f21326 !important;
-}
-
-/* Test styles */
-
-.swiper-button-prev {
-  background-image: url(/target2.svg) !important;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center;
-}
-
-.swiper-button-next {
-  background-image: url(/target2.svg) !important;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center;
-}
-
-.swiper-button-next::after {
-  display: none;
-}
-
-.swiper-button-prev::after {
-  display: none;
 }
