@@ -1,3 +1,4 @@
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import SwiperCore from "swiper";
@@ -9,11 +10,28 @@ import "swiper/css/bundle";
 SwiperCore.use([Navigation, Pagination]);
 
 const Slider = ({ records }) => {
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+  React.useEffect(() => {
+    function watchWidth() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", watchWidth);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", watchWidth);
+    };
+  }, []);
+
+  const slides = windowWidth >= 768 ? 3.3 : 3;
+  const space = windowWidth >= 1024 ? 45 : 10;
+
   return (
     <div className="slider-container">
       <Swiper
-        spaceBetween={10}
-        slidesPerView={3}
+        spaceBetween={space}
+        slidesPerView={slides}
         navigation={{
           nextEl: ".custom-swiper-button-next",
           prevEl: ".custom-swiper-button-prev",
@@ -27,8 +45,8 @@ const Slider = ({ records }) => {
                 src={`../../public/albums/${record.image}`}
                 alt={`${record.album} by ${record.artist}`}
               />
-              <p>{record.artist}</p>
-              <p>{record.album}</p>
+              <p className="record--artist">{record.artist}</p>
+              <p className="record--album">{record.album}</p>
             </div>
           </SwiperSlide>
         ))}
