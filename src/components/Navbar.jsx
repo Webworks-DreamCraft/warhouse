@@ -30,9 +30,11 @@ const Navbar = ({ openModal }) => (
           </a>
         </ul>
         <section className="hidden sm:flex">
-          <button className="hover:border-warhouse-red border-2 border-gray-50 rounded-sm p-2 px-6 mx-2">
-            Contact
-          </button>
+          <a href="#contact">
+            <button className="hover:border-warhouse-red border-2 border-gray-50 rounded-sm p-2 px-6 mx-2">
+              Contact
+            </button>
+          </a>
         </section>
       </nav>
     </section>

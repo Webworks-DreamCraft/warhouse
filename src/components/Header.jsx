@@ -30,9 +30,11 @@ const Header = () => {
         </svg>
         <p>Mastering</p>
       </section>
-      <button className="hover:border-warhouse-red hover:bg-warhouse-red hover:text-gray-50 font-libre-basker text-gray-950 border-2 border-gray-50 bg-gray-50 rounded-sm text-lg p-4 px-16 m-10 md:m-0 md:mb-8">
-            Contact
-      </button>
+      <a href="#contact">
+        <button className="hover:border-warhouse-red hover:bg-warhouse-red hover:text-gray-50 font-libre-basker text-gray-950 border-2 border-gray-50 bg-gray-50 rounded-sm text-lg p-4 px-16 m-10 md:m-0 md:mb-8">
+              Contact
+        </button>
+      </a>
       <section className="flex justify-between">
         <section>
           <img className="md:w-full" src={headerImage1} />
