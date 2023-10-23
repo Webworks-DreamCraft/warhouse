@@ -3,6 +3,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import NavModal from "./components/NavModal";
 import Carousel from "./components/Slider/Carousel";
+import Contact from "./components/Contact";
 
 const App = () => {
   const [isModalShowing, setIsModalShowing] = useState(false);
@@ -22,9 +23,12 @@ const App = () => {
       <Navbar openModal={openModal} />
       <NavModal isModalShowing={isModalShowing} closeModal={closeModal} />
       <div className="">
-        <div className="container mx-auto bg-gray-950">
+        <div className="md:container mx-auto bg-gray-950">
           <Carousel />
           <Bio />
+        </div>
+        <div>
+          <Contact />
         </div>
       </div>
     </>
