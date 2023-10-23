@@ -22,10 +22,10 @@ const Navbar = ({ openModal }) => (
           <a className="mx-2 hover:marker:text-warhouse-red" href="#about">
             <li>About</li>
           </a>
-          <a className="mx-2 ml-10 hover:marker:text-warhouse-red" href="#location">
+          <a className="mx-2 ml-10 hover:marker:text-warhouse-red" href="#gear">
             <li>Gear</li>
           </a>
-          <a className="mx-2 ml-10 hover:marker:text-warhouse-red" href="#portfolio">
+          <a className="mx-2 ml-10 hover:marker:text-warhouse-red" href="#clients">
             <li>Clients</li>
           </a>
         </ul>
