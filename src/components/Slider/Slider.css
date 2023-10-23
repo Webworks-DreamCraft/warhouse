@@ -46,6 +46,7 @@
   width: auto !important;
   position: relative !important;
   text-align: left;
+  z-index: 2;
 }
 
 /* Custom navigation button styles */
