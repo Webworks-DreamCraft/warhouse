@@ -29,7 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 0.5rem;
 }
 
 .custom-swiper-navigation {
@@ -51,8 +51,8 @@
 /* Custom navigation button styles */
 .custom-swiper-button-prev,
 .custom-swiper-button-next {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +71,8 @@
 .swiper-pagination-bullet {
   background-color: #f6f6f6 !important;
   opacity: 1 !important;
-  width: 5px !important;
+  width: 3px !important;
+  height: 3px !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -92,6 +93,9 @@
     width: auto;
     aspect-ratio: 4/3;
   }
+  .swiper-functions {
+    margin-top: 1rem;
+  }
 }
 
 @media screen and (min-width: 640px) {
@@ -103,10 +107,11 @@
 
   .swiper-pagination-bullet {
     width: 8px !important;
+    height: 8px !important;
   }
 
   .swiper-functions {
-    margin-top: 25px;
+    margin-top: 1.5rem;
   }
 }
 

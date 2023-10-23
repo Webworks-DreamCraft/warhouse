@@ -41,10 +41,12 @@ const Slider = ({ records }) => {
         {records.map((record) => (
           <SwiperSlide key={record.image}>
             <div className="swiper-slide-content">
-              <img
-                src={`../../public/albums/${record.image}`}
-                alt={`${record.album} by ${record.artist}`}
-              />
+              <a target="_blank" href={record.spotify}>
+                <img
+                  src={`../../public/albums/${record.image}`}
+                  alt={`${record.album} by ${record.artist}`}
+                />
+              </a>
               <p className="record--artist">{record.artist}</p>
               <p className="record--album">{record.album}</p>
             </div>
