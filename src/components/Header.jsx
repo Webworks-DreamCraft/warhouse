@@ -4,7 +4,7 @@ import headerImage1 from "/header1.png";
 import headerImage2 from "/header2.png";
 
 const Header = () => (
-  <section className="flex flex-col items-center mt-5 text-gray-50">
+  <section className="flex flex-col items-center mt-5 mb-5 md:mb-20 text-gray-50">
     <section className="relative flex flex-col md:flex-row md:mt-8 items-center">
       <h1 className="text-8xl/[150px] sm:text-9xl/[150px] md:text-[115px] lg:text-[150px] xl:text-[210px] font-bold font-libre-franklin">
         WAR
