@@ -19,7 +19,7 @@ const Header = () => (
         HOUSE
       </h1>
     </section>
-    <section className="flex flex-row w-full font-libre-basker font-light justify-between w-1/2 lg:text-2xl xl:text-3xl  md:my-8">
+    <section className="flex flex-row font-libre-basker font-light justify-between w-1/2 lg:text-2xl xl:text-3xl  md:my-8">
       <p>Recording</p>
       <Circle width="40" height="40" classes="fill-gray-50 hidden lg:flex" />
       <Circle width="25" height="25" classes="fill-gray-50 lg:hidden" />
