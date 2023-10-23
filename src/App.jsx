@@ -23,7 +23,7 @@ const App = () => {
       <Navbar openModal={openModal} />
       <NavModal isModalShowing={isModalShowing} closeModal={closeModal} />
       <div className="">
-        <div className="container mx-auto bg-gray-950">
+        <div className="md:container mx-auto bg-gray-950">
           <Header />
           <Bio />
         </div>
