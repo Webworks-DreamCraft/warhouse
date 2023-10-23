@@ -43,7 +43,7 @@ const Slider = ({ records }) => {
             <div className="swiper-slide-content">
               <a target="_blank" href={record.spotify}>
                 <img
-                  src={`../../public/albums/${record.image}`}
+                  src={`/${record.image}`}
                   alt={`${record.album} by ${record.artist}`}
                 />
               </a>
