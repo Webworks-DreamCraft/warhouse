@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import instrument from "/instrument.png"
 
 const Equipment = () => {
 
@@ -21,21 +22,33 @@ const Equipment = () => {
   }, [])
 
   return (
-    <section className="text-gray-50">
-      <h1>FEATURED</h1>
-      <h1>EQUIPMENT</h1>
-      <h2>Additional gear information is available upon request</h2>
-      <h2>Amps and Cabinets</h2>
-      <h2>Instruments</h2>
-      <ul className="list-image-[url(/unionForList.svg)] columns-2">
+    <section className="text-gray-50 flex justify-center items-center">
+      <section className="w-11/12 md:w-full flex flex-col items-center">
+        <h1>FEATURED</h1>
+        <h1>EQUIPMENT</h1>
+        <h2>Additional gear information is available upon request</h2>
+        <h2>Amps and Cabinets</h2>
+        <section className="flex flex-col md:flex-row items-center md:w-full">
+          <section className="w-full flex flex-col items-center md:w-1/2">
+            <h2>Instruments</h2>
+            <ul className="list-none columns-2">
 
-        {!instruments 
-          ? null :
-          instruments.map(instrument => (
-            <li>{instrument}</li>
-          ))
-        }
-      </ul>
+              {!instruments 
+                ? null :
+                instruments.map(instrument => (
+                  <li className="flex items-center gap-3">
+                    <img src="/unionForList.svg" />
+                    {instrument}
+                  </li>
+                ))
+              }
+            </ul>
+          </section>
+          <section className="md:w-1/2">
+            <img src={instrument} />
+          </section>
+        </section>
+      </section>
     </section>
   )
 }
