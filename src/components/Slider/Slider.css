@@ -36,6 +36,7 @@
   display: flex;
 }
 
+/* Override Swiper styles */
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
@@ -70,6 +71,7 @@
 /* Pagination styles */
 
 .swiper-pagination-bullet {
+  /* Override Swiper styles */
   background-color: #f6f6f6 !important;
   opacity: 1 !important;
   width: 3px !important;
@@ -77,6 +79,7 @@
 }
 
 .swiper-pagination-bullet-active {
+  /* Override Swiper styles */
   background-color: #f21326 !important;
 }
 
@@ -106,6 +109,7 @@
     height: 40px;
   }
 
+  /* Override Swiper styles */
   .swiper-pagination-bullet {
     width: 8px !important;
     height: 8px !important;

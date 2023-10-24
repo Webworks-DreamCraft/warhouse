@@ -1,3 +1,9 @@
 .contact--container {
   background: linear-gradient(120deg, #fff 51.14%, rgba(84, 82, 82, 0) 100%);
 }
+
+@media screen and (min-width: 768px) {
+  .contact--container {
+    background: linear-gradient(130deg, #fff 51.14%, rgba(84, 82, 82, 0) 100%);
+  }
+}
