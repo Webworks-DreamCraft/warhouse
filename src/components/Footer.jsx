@@ -4,8 +4,8 @@ import Chain from "/large_chain_white.png";
 const Footer = () => {
   return (
     <footer className="text-gray-50 pt-3 pb-3 sm:pt-6 sm:pb-6">
-      <div className="flex items-center justify-around sm:justify-between">
-        <div className="text-center sm:w-1/3">
+      <div className="flex items-center justify-around md:justify-between">
+        <div className="text-center md:w-1/3">
           <p className="font-libre-franklin font-bold text-xs">Email</p>
           <p className="font-libre-basker text-[10px] pb-2">
             <a
@@ -21,7 +21,7 @@ const Footer = () => {
             533 NW 32nd Ave Gainesville, FL 32609
           </p>
         </div>
-        <div className="hidden md:block sm:w-1/3">
+        <div className="hidden md:block md:w-1/3">
           <ul className="font-libre-franklin text-xs flex list-none justify-around max-w-[190px] mx-auto sm:pb-1">
             <li>
               <a href="#about" className="hover:text-warhouse-red">
@@ -49,7 +49,7 @@ const Footer = () => {
             2023 War House. All Rights Reserved.
           </p>
         </div>
-        <div className="sm:w-1/3">
+        <div className="md:w-1/3">
           <a href="#">
             <img src={SmallLogo} className="max-w-[85px] mx-auto" />
           </a>
