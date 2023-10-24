@@ -4,6 +4,7 @@ import Spotify from "./components/Spotify";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import NavModal from "./components/NavModal";
+import Equipment from "./components/Equipment";
 
 const App = () => {
 
@@ -27,6 +28,7 @@ const App = () => {
         <div className="md:container mx-auto bg-gray-950">
           <Header />
           <Spotify />
+          <Equipment />
           <Bio />
         </div>
       </div>
