@@ -1,5 +1,4 @@
-const Spotify = () => {
-  return (
+const Spotify = () => (
     <section className="w-full my-10 flex justify-center">
       <iframe
         className="rounded w-11/12 md:w-full"
@@ -11,6 +10,5 @@ const Spotify = () => {
       ></iframe>
     </section>
   );
-};
 
 export default Spotify;
