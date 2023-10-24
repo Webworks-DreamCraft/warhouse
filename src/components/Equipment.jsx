@@ -29,14 +29,14 @@ const Equipment = () => {
         <h2>Additional gear information is available upon request</h2>
         <h2>Amps and Cabinets</h2>
         <section className="flex flex-col md:flex-row items-center md:w-full">
-          <section className="w-full flex flex-col items-center md:w-1/2">
-            <h2>Instruments</h2>
-            <ul className="list-none columns-2">
+          <section className="w-full flex flex-col my-8 items-center md:w-1/2">
+            <h2 className="text-4xl font-bold font-libre-franklin mb-3">Instruments</h2>
+            <ul className="list-none columns-2 text-xs font-libre-basker">
 
               {!instruments 
                 ? null :
                 instruments.map(instrument => (
-                  <li className="flex items-center gap-3">
+                  <li className="flex items-center my-3 gap-x-3">
                     <img src="/unionForList.svg" />
                     {instrument}
                   </li>
