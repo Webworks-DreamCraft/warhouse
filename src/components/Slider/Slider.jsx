@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import SwiperCore from "swiper";
@@ -10,12 +10,12 @@ import "swiper/css/bundle";
 SwiperCore.use([Navigation, Pagination]);
 
 const Slider = ({ records }) => {
-  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  React.useEffect(() => {
-    function watchWidth() {
+  useEffect(() => {
+    const watchWidth = () => {
       setWindowWidth(window.innerWidth);
-    }
+    };
     window.addEventListener("resize", watchWidth);
 
     // Cleanup
