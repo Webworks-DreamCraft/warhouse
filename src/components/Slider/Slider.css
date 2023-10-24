@@ -64,6 +64,11 @@
   border-radius: 50%;
 }
 
+.custom-swiper-button-prev:hover,
+.custom-swiper-button-next:hover {
+  border: 1px solid #f21326;
+}
+
 .swiper-button-disabled {
   opacity: 0.2;
 }
