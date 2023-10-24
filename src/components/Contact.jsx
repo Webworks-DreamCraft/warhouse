@@ -5,7 +5,7 @@ import "./Contact.css";
 const Contact = () => {
   return (
     <div id="contact" className="box-border contact--container">
-      <div className="mx-auto p-4 text-center sm:text-left sm:flex sm:items-center sm:justify-between sm:pt-10 sm:pb-10 lg:pl-10 lgpr-10 md:container">
+      <div className="mx-auto pt-4 pr-4 pl-4 pb-12 text-center sm:text-left sm:flex sm:items-center sm:justify-between sm:pt-10 sm:pb-10 lg:pl-10 lgpr-10 md:container">
         <div className="sm:w-5/8">
           <h2 className="relative text-warhouse-gray px-7 pt-5 mb-5 mt-5 inline-block font-libre-franklin text-2xl font-bold xxs:text-4xl sm:text-5xl sm:pl-0 sm:pr-10 sm:pt-8 lg:text-7xl lg:pr-14 lg:pt-12">
             <img
@@ -20,7 +20,13 @@ const Contact = () => {
               questions to my email below.
             </p>
             <p className="font-libre-basker mb-10 text-sm sm:text-lg">
-              Warhouserecordings@gmail.com
+              <a
+                href="mailto:username@example.com"
+                target="_blank"
+                className="hover:text-warhouse-red"
+              >
+                Warhouserecordings@gmail.com
+              </a>
             </p>
           </div>
         </div>

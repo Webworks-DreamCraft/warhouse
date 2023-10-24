@@ -70,16 +70,16 @@
 
 /* Pagination styles */
 
+/* Override Swiper styles */
 .swiper-pagination-bullet {
-  /* Override Swiper styles */
   background-color: #f6f6f6 !important;
   opacity: 1 !important;
   width: 3px !important;
   height: 3px !important;
 }
 
+/* Override Swiper styles */
 .swiper-pagination-bullet-active {
-  /* Override Swiper styles */
   background-color: #f21326 !important;
 }
 

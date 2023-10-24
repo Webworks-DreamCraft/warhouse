@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import NavModal from "./components/NavModal";
 import Carousel from "./components/Slider/Carousel";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [isModalShowing, setIsModalShowing] = useState(false);
@@ -29,6 +30,9 @@ const App = () => {
         </div>
         <div>
           <Contact />
+        </div>
+        <div className="md:container mx-auto bg-gray-950">
+          <Footer />
         </div>
       </div>
     </>
