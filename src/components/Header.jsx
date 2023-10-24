@@ -33,7 +33,7 @@ const Header = () => (
         Contact
       </button>
     </a>
-    <section className="flex justify-between">
+    <section className="flex justify-between w-11/12 md:w-full">
       <section>
         <img className="md:w-full" src={headerImage1} />
       </section>
