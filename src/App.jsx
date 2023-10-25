@@ -4,22 +4,25 @@ import Spotify from "./components/Spotify";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import NavModal from "./components/NavModal";
+<<<<<<< HEAD
 import Equipment from "./components/Equipment";
+=======
+import Carousel from "./components/Slider/Carousel";
+>>>>>>> ee0c0ae8cf1bf5f866b32fe5b738d314010274cd
 
 const App = () => {
-
   const [isModalShowing, setIsModalShowing] = useState(false);
-  
+
   const openModal = () => {
     setIsModalShowing(!isModalShowing);
-    document.body.classList.add('overflow-hidden');
-  }
+    document.body.classList.add("overflow-hidden");
+  };
 
   const closeModal = () => {
     setIsModalShowing(!isModalShowing);
-    document.body.classList.remove('overflow-hidden');
-  }
-  
+    document.body.classList.remove("overflow-hidden");
+  };
+
   return (
     <>
       <Navbar openModal={openModal} />
@@ -27,6 +30,7 @@ const App = () => {
       <div className="">
         <div className="md:container mx-auto bg-gray-950">
           <Header />
+          <Carousel />
           <Spotify />
           <Equipment />
           <Bio />

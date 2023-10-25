@@ -36,8 +36,7 @@ const Equipment = () => {
       <section className="w-11/12 md:w-full flex flex-col items-center">
         <h1>FEATURED</h1>
         <h1>EQUIPMENT</h1>
-        <h2>Additional gear information is available upon request</h2>
-        <h2>Amps and Cabinets</h2>
+        <h2 className="font-libre-basker text-center text-lg">Additional gear information is available upon request</h2>
         <section className="flex flex-col md:flex-row items-center md:w-full">
           <section className="w-full flex flex-col my-6 items-center md:w-1/2">
             <h2 className="text-4xl font-bold font-libre-franklin">
