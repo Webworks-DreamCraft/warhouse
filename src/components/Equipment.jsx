@@ -41,31 +41,35 @@ const Equipment = () => {
             <h2 className="text-4xl font-bold font-libre-franklin mb-6">
               Instruments
             </h2>
-            <section className="text-xs w-9/12">
-              <ul className="columns-2 font-libre-basker mb-6 gap-y-6">
+            <section className="font-libre-basker text-xs w-9/12">
+              <section className="mb-3 columns-2 ">
                 {!instruments
                   ? null
                   : instruments.slice(0, 6).map((instrument) => {
                       return (
-                        <li className="flex items-center p-2 mb-6 gap-x-3">
-                          <img src="/unionForList.svg" />
-                          {instrument}
-                        </li>
+                        <section className="flex h-12 flex-row items-center">
+                          <img className="mt-4 mx-3" src="/unionForList.svg" />
+                          <p className="first:mt-0 last:mb-0 mt-3">
+                            {instrument}
+                          </p>
+                        </section>
                       );
                     })}
-              </ul>
-              <ul className="columns-2 font-libre-basker gap-y-6">
+              </section>
+              <section className="mb-3 columns-2 ">
                 {showMoreInstruments && instruments
                   ? instruments.slice(6).map((instrument) => {
                       return (
-                        <li className="flex items-center mb-6 gap-x-3">
-                          <img src="/unionForList.svg" />
-                          {instrument}
-                        </li>
+                        <section className="flex h-12 flex-row items-center">
+                          <img className="mt-4 mx-3" src="/unionForList.svg" />
+                          <p className="first:mt-0 last:mb-0 mt-3">
+                            {instrument}
+                          </p>
+                        </section>
                       );
                     })
                   : null}
-              </ul>
+              </section>
             </section>
             <button
               onClick={() => setShowMoreInstruments(!showMoreInstruments)}
