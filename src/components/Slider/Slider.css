@@ -1,0 +1,138 @@
+/* Styles for Swiper cards */
+
+.swiper-wrapper img {
+  height: 60px;
+  width: 75px;
+  object-fit: cover;
+}
+
+.record--artist,
+.record--album {
+  font-family: "Libre Baskerville", sans-serif;
+}
+
+.record--artist {
+  font-size: 0.75rem;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.record--album {
+  font-size: 0.6rem;
+  opacity: 0.6;
+  text-align: left;
+  margin-top: 0.25rem;
+}
+
+/* Swiper button and navigation container styles */
+.swiper-functions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.custom-swiper-navigation {
+  display: flex;
+}
+
+/* Override Swiper styles */
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: auto !important;
+  left: auto !important;
+  top: auto !important;
+  width: auto !important;
+  position: relative !important;
+  text-align: left;
+  z-index: 2;
+}
+
+/* Custom navigation button styles */
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin: 0 5px;
+  border: 1px solid #f6f6f6;
+  border-radius: 50%;
+}
+
+.swiper-button-disabled {
+  opacity: 0.2;
+}
+
+/* Pagination styles */
+
+/* Override Swiper styles */
+.swiper-pagination-bullet {
+  background-color: #f6f6f6 !important;
+  opacity: 1 !important;
+  width: 3px !important;
+  height: 3px !important;
+}
+
+/* Override Swiper styles */
+.swiper-pagination-bullet-active {
+  background-color: #f21326 !important;
+}
+
+/* Media queries */
+@media screen and (min-width: 300px) {
+  .swiper-wrapper img {
+    height: 80px;
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 390px) {
+  .swiper-wrapper img {
+    height: auto;
+    width: auto;
+    aspect-ratio: 4/3;
+  }
+  .swiper-functions {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .custom-swiper-button-prev,
+  .custom-swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+  /* Override Swiper styles */
+  .swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+  }
+
+  .swiper-functions {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .record--artist,
+  .record--album {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .record--artist {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .record--album {
+    font-size: 0.8rem;
+  }
+}
