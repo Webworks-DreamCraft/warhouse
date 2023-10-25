@@ -1,4 +1,6 @@
 import Bio from "./components/Bio";
+import Header from "./components/Header";
+import Spotify from "./components/Spotify";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import NavModal from "./components/NavModal";
@@ -25,6 +27,8 @@ const App = () => {
       <NavModal isModalShowing={isModalShowing} closeModal={closeModal} />
       <div className="">
         <div className="md:container mx-auto bg-gray-950">
+          <Header />
+          <Spotify />
           <Carousel />
           <Bio />
         </div>

@@ -15,6 +15,7 @@ const Bio = () => (
         ABOUT
       </h2>
       <p className="text-center mb-8 text-sm sm:text-left sm:mb-4">
+      <p className="text-center mb-8 text-sm sm:text-left sm:mb-4">
         John Howard: Sound Engineer
       </p>
       <p className="text-center mb-3 text-sm leading-[1.35rem] sm:text-left sm:mb-6">

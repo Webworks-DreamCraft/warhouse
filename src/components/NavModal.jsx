@@ -1,6 +1,6 @@
 import { Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import WarhouseLogo from "./WarhouseLogo";
+import WarhouseLogo from "./svg/WarhouseLogo";
 
 const NavModal = ({ isModalShowing, closeModal }) => (
     <Transition.Root show={isModalShowing}>

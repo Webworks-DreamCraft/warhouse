@@ -1,4 +1,4 @@
-import WarhouseLogo from "./WarhouseLogo";
+import WarhouseLogo from "./svg/WarhouseLogo";
 
 const Navbar = ({ openModal }) => (
     <section className="flex flex-row sticky top-0 bg-gray-950 text-gray-50 justify-between py-2 border-b-2 border-b-slate-50 antialiased font-libre-basker items-center text-base z-10">
@@ -22,17 +22,19 @@ const Navbar = ({ openModal }) => (
           <a className="mx-2 hover:marker:text-warhouse-red" href="#about">
             <li>About</li>
           </a>
-          <a className="mx-2 ml-10 hover:marker:text-warhouse-red" href="#location">
+          <a className="mx-2 ml-10 hover:marker:text-warhouse-red" href="#gear">
             <li>Gear</li>
           </a>
-          <a className="mx-2 ml-10 hover:marker:text-warhouse-red" href="#portfolio">
+          <a className="mx-2 ml-10 hover:marker:text-warhouse-red" href="#clients">
             <li>Clients</li>
           </a>
         </ul>
         <section className="hidden sm:flex">
-          <button className="hover:border-warhouse-red border-2 border-gray-50 rounded-sm p-2 px-6 mx-2">
-            Contact
-          </button>
+          <a href="#contact">
+            <button className="hover:border-warhouse-red border-2 border-gray-50 rounded-sm p-2 px-6 mx-2">
+              Contact
+            </button>
+          </a>
         </section>
       </nav>
     </section>
