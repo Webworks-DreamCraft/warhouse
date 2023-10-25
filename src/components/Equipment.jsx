@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import chain from "/largeChain.svg"
+import chain from "/largeChain.svg";
 import instrument from "/instrument.png";
-import Chain from "./svg/Chain"
+import Chain from "./svg/Chain";
 import amp from "/amp.png";
-import target from "/target.svg";
+import target from "/target2.svg";
 
 const Equipment = () => {
   const [instruments, setInstruments] = useState();
@@ -37,23 +37,13 @@ const Equipment = () => {
   return (
     <section className="text-gray-50 flex justify-center items-center">
       <section className="w-11/12 md:w-full flex flex-col items-center md:items-start">
-        <h2 className="relative hidden px-7 pt-5 mb-5 md:inline-block font-libre-franklin text-2xl font-bold xxs:text-4xl sm:text-7xl sm:pl-0 sm:pr-14 sm:pt-11">
+        <h2 className="relative px-7 pt-5 mb-5 mt-5 inline-block font-libre-franklin text-2xl font-bold xxs:text-4xl sm:text-5xl sm:pl-0 sm:pr-10 sm:pt-8 lg:text-7xl lg:pr-14 lg:pt-12">
           <img
             src={target}
-            className="absolute top-0 right-0 max-w-[45px] sm:max-w-[90px]"
+            className="absolute top-0 right-0 max-w-[45px] sm:max-w-[60px] lg:max-w-[90px]"
           />
-          FEATURED EQUIPMENT
-        </h2>
-        <h2 className="md:hidden relative px-7 pt-5 inline-block font-libre-franklin text-2xl font-bold xxs:text-4xl sm:text-7xl sm:pl-0 sm:pr-14 sm:pt-11">
-          <img
-            src={target}
-            className="absolute top-0 right-0 max-w-[45px] sm:max-w-[90px]"
-          />
-          FEATURED
-        </h2>
-        <h1 className="md:hidden px-7 mb-5 inline-block font-libre-franklin text-2xl font-bold xxs:text-4xl sm:text-7xl sm:pl-0 sm:pr-14 sm:pt-11">
           EQUIPMENT
-        </h1>
+        </h2>
         <h2 className="font-libre-basker text-center text-lg">
           Additional gear information is available upon request
         </h2>
@@ -76,7 +66,10 @@ const Equipment = () => {
                   : ampsCabinets.slice(0, 6).map((instrument) => {
                       return (
                         <section className="flex h-12 flex-row items-center">
-                          <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
+                          <img
+                            className="mt-4 mx-3 md:mr-3 md:mx-0"
+                            src="/unionForList.svg"
+                          />
                           <p className="first:mt-0 last:mb-0 mt-3">
                             {instrument}
                           </p>
@@ -89,7 +82,10 @@ const Equipment = () => {
                   ? ampsCabinets.slice(6).map((instrument) => {
                       return (
                         <section className="flex h-12 flex-row items-center">
-                          <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
+                          <img
+                            className="mt-4 mx-3 md:mr-3 md:mx-0"
+                            src="/unionForList.svg"
+                          />
                           <p className="first:mt-0 last:mb-0 mt-3">
                             {instrument}
                           </p>
@@ -125,7 +121,10 @@ const Equipment = () => {
                   : instruments.slice(0, 6).map((instrument) => {
                       return (
                         <section className="flex h-12 flex-row items-center">
-                          <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
+                          <img
+                            className="mt-4 mx-3 md:mr-3 md:mx-0"
+                            src="/unionForList.svg"
+                          />
                           <p className="first:mt-0 last:mb-0 mt-3">
                             {instrument}
                           </p>
@@ -138,7 +137,10 @@ const Equipment = () => {
                   ? instruments.slice(6).map((instrument) => {
                       return (
                         <section className="flex h-12 flex-row items-center">
-                          <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
+                          <img
+                            className="mt-4 mx-3 md:mr-3 md:mx-0"
+                            src="/unionForList.svg"
+                          />
                           <p className="first:mt-0 last:mb-0 mt-3">
                             {instrument}
                           </p>
