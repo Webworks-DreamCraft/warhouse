@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import instrument from "/instrument.png";
+import amp from "/amp.png"
 
 const Equipment = () => {
   const [instruments, setInstruments] = useState();
   const [showMoreInstruments, setShowMoreInstruments] = useState(false);
 
   const [ampsCabinets, setAmpsCabinets] = useState();
+  const [showMoreAmps, setShowMoreAmps] = useState(false);
 
   const API_URL =
     "https://sheets.googleapis.com/v4/spreadsheets/1BPi6agZ8LvgqIyPh9g1zKpA_zJYSp1TezKURX17CXkA/values/Sheet1?valueRenderOption=FORMATTED_VALUE&majorDimension=COLUMNS&key=AIzaSyCIVKqeabMp_apNVSoAX7QmP955srg93xA";
@@ -38,11 +40,62 @@ const Equipment = () => {
         <h2>Amps and Cabinets</h2>
         <section className="flex flex-col md:flex-row items-center md:w-full">
           <section className="w-full flex flex-col my-6 items-center md:w-1/2">
+            <h2 className="text-4xl font-bold font-libre-franklin">
+              Amps and
+            </h2>
+            <h2 className="text-4xl font-bold font-libre-franklin mb-6">
+              Cabinets
+            </h2>
+            <section className="font-libre-basker text-xs w-9/12">
+              <section className=" columns-2 ">
+                {!ampsCabinets
+                  ? null
+                  : ampsCabinets.slice(0, 6).map((instrument) => {
+                      return (
+                        <section className="flex h-12 flex-row items-center">
+                          <img className="mt-4 mx-3" src="/unionForList.svg" />
+                          <p className="first:mt-0 last:mb-0 mt-3">
+                            {instrument}
+                          </p>
+                        </section>
+                      );
+                    })}
+              </section>
+              <section className="mb-3 columns-2 ">
+                {showMoreAmps && ampsCabinets
+                  ? ampsCabinets.slice(6).map((instrument) => {
+                      return (
+                        <section className="flex h-12 flex-row items-center">
+                          <img className="mt-4 mx-3" src="/unionForList.svg" />
+                          <p className="first:mt-0 last:mb-0 mt-3">
+                            {instrument}
+                          </p>
+                        </section>
+                      );
+                    })
+                  : null}
+              </section>
+            </section>
+            {showMoreAmps ? null :
+              <button
+                onClick={() => setShowMoreAmps(!showMoreAmps)}
+                className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 px-[10px]"
+              >
+                Show All
+              </button>
+            }
+          </section>
+          <section className="md:w-1/2">
+            <img src={amp} />
+          </section>
+        </section>
+        <section className="flex flex-col md:flex-row items-center md:w-full">
+          <section className="w-full flex flex-col my-6 items-center md:w-1/2">
             <h2 className="text-4xl font-bold font-libre-franklin mb-6">
               Instruments
             </h2>
             <section className="font-libre-basker text-xs w-9/12">
-              <section className="mb-3 columns-2 ">
+              <section className="columns-2 ">
                 {!instruments
                   ? null
                   : instruments.slice(0, 6).map((instrument) => {
@@ -71,12 +124,14 @@ const Equipment = () => {
                   : null}
               </section>
             </section>
-            <button
-              onClick={() => setShowMoreInstruments(!showMoreInstruments)}
-              className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 px-[10px]"
-            >
-              Show All
-            </button>
+            {!(instruments.length > 6) ? null :
+              <button
+                onClick={() => setShowMoreInstruments(!showMoreInstruments)}
+                className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 px-[10px]"
+              >
+                Show All
+              </button>
+            }
           </section>
           <section className="md:w-1/2">
             <img src={instrument} />
