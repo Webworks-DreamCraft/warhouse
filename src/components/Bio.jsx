@@ -14,7 +14,7 @@ const Bio = () => (
         />
         ABOUT
       </h2>
-      <p className="text-center mb-8 text-sm sm:text-left sm:mb-4">
+      <p className="text-center mb-8 text-sm sm:text-left sm:mb-4"></p>
       <p className="text-center mb-8 text-sm sm:text-left sm:mb-4">
         John Howard: Sound Engineer
       </p>
