@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import chain from "/largeChain.svg"
 import instrument from "/instrument.png";
-import amp from "/amp.png"
+import Chain from "./svg/Chain"
+import amp from "/amp.png";
+import target from "/target.svg";
 
 const Equipment = () => {
   const [instruments, setInstruments] = useState();
@@ -33,16 +36,37 @@ const Equipment = () => {
 
   return (
     <section className="text-gray-50 flex justify-center items-center">
-      <section className="w-11/12 md:w-full flex flex-col items-center">
-        <h1>FEATURED</h1>
-        <h1>EQUIPMENT</h1>
-        <h2 className="font-libre-basker text-center text-lg">Additional gear information is available upon request</h2>
-        <section className="flex flex-col md:flex-row items-center md:w-full">
-          <section className="w-full flex flex-col my-6 items-center md:w-1/2">
-            <h2 className="text-4xl font-bold font-libre-franklin">
+      <section className="w-11/12 md:w-full flex flex-col items-center md:items-start">
+        <h2 className="relative hidden px-7 pt-5 mb-5 md:inline-block font-libre-franklin text-2xl font-bold xxs:text-4xl sm:text-7xl sm:pl-0 sm:pr-14 sm:pt-11">
+          <img
+            src={target}
+            className="absolute top-0 right-0 max-w-[45px] sm:max-w-[90px]"
+          />
+          FEATURED EQUIPMENT
+        </h2>
+        <h2 className="md:hidden relative px-7 pt-5 inline-block font-libre-franklin text-2xl font-bold xxs:text-4xl sm:text-7xl sm:pl-0 sm:pr-14 sm:pt-11">
+          <img
+            src={target}
+            className="absolute top-0 right-0 max-w-[45px] sm:max-w-[90px]"
+          />
+          FEATURED
+        </h2>
+        <h1 className="md:hidden px-7 mb-5 inline-block font-libre-franklin text-2xl font-bold xxs:text-4xl sm:text-7xl sm:pl-0 sm:pr-14 sm:pt-11">
+          EQUIPMENT
+        </h1>
+        <h2 className="font-libre-basker text-center text-lg">
+          Additional gear information is available upon request
+        </h2>
+        <img className="mt-10" src={chain} />
+        <section className="flex flex-col my-10 md:flex-row items-center md:w-full">
+          <section className="w-full flex flex-col my-6 items-center md:items-start md:w-1/2">
+            <h2 className="hidden md:block text-4xl font-bold font-libre-franklin mb-6">
+              Amps and Cabinets
+            </h2>
+            <h2 className="md:hidden text-4xl font-bold font-libre-franklin">
               Amps and
             </h2>
-            <h2 className="text-4xl font-bold font-libre-franklin mb-6">
+            <h2 className="md:hidden text-4xl font-bold font-libre-franklin mb-6">
               Cabinets
             </h2>
             <section className="font-libre-basker text-xs w-9/12">
@@ -52,7 +76,7 @@ const Equipment = () => {
                   : ampsCabinets.slice(0, 6).map((instrument) => {
                       return (
                         <section className="flex h-12 flex-row items-center">
-                          <img className="mt-4 mx-3" src="/unionForList.svg" />
+                          <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
                           <p className="first:mt-0 last:mb-0 mt-3">
                             {instrument}
                           </p>
@@ -65,7 +89,7 @@ const Equipment = () => {
                   ? ampsCabinets.slice(6).map((instrument) => {
                       return (
                         <section className="flex h-12 flex-row items-center">
-                          <img className="mt-4 mx-3" src="/unionForList.svg" />
+                          <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
                           <p className="first:mt-0 last:mb-0 mt-3">
                             {instrument}
                           </p>
@@ -75,21 +99,22 @@ const Equipment = () => {
                   : null}
               </section>
             </section>
-            {showMoreAmps ? null :
+            {showMoreAmps ? null : (
               <button
                 onClick={() => setShowMoreAmps(!showMoreAmps)}
-                className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 px-[10px]"
+                className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 md:py-2 px-[10px] md:px-3 md:ml-3"
               >
                 Show All
               </button>
-            }
+            )}
           </section>
           <section className="md:w-1/2">
             <img src={amp} />
           </section>
         </section>
-        <section className="flex flex-col md:flex-row items-center md:w-full">
-          <section className="w-full flex flex-col my-6 items-center md:w-1/2">
+        <img src={chain} />
+        <section className="flex flex-col my-10 md:flex-row items-center md:w-full">
+          <section className="w-full flex flex-col my-6 items-center md:items-start md:w-1/2">
             <h2 className="text-4xl font-bold font-libre-franklin mb-6">
               Instruments
             </h2>
@@ -100,7 +125,7 @@ const Equipment = () => {
                   : instruments.slice(0, 6).map((instrument) => {
                       return (
                         <section className="flex h-12 flex-row items-center">
-                          <img className="mt-4 mx-3" src="/unionForList.svg" />
+                          <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
                           <p className="first:mt-0 last:mb-0 mt-3">
                             {instrument}
                           </p>
@@ -113,7 +138,7 @@ const Equipment = () => {
                   ? instruments.slice(6).map((instrument) => {
                       return (
                         <section className="flex h-12 flex-row items-center">
-                          <img className="mt-4 mx-3" src="/unionForList.svg" />
+                          <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
                           <p className="first:mt-0 last:mb-0 mt-3">
                             {instrument}
                           </p>
@@ -123,14 +148,14 @@ const Equipment = () => {
                   : null}
               </section>
             </section>
-            {!(instruments.length > 6) ? null :
+            {!instruments ? null : !(instruments.length > 6) ? null : (
               <button
                 onClick={() => setShowMoreInstruments(!showMoreInstruments)}
                 className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 px-[10px]"
               >
                 Show All
               </button>
-            }
+            )}
           </section>
           <section className="md:w-1/2">
             <img src={instrument} />

@@ -4,11 +4,8 @@ import Spotify from "./components/Spotify";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import NavModal from "./components/NavModal";
-<<<<<<< HEAD
 import Equipment from "./components/Equipment";
-=======
 import Carousel from "./components/Slider/Carousel";
->>>>>>> ee0c0ae8cf1bf5f866b32fe5b738d314010274cd
 
 const App = () => {
   const [isModalShowing, setIsModalShowing] = useState(false);
