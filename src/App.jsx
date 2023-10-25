@@ -3,21 +3,21 @@ import Header from "./components/Header";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import NavModal from "./components/NavModal";
+import Carousel from "./components/Slider/Carousel";
 
 const App = () => {
-
   const [isModalShowing, setIsModalShowing] = useState(false);
-  
+
   const openModal = () => {
     setIsModalShowing(!isModalShowing);
-    document.body.classList.add('overflow-hidden');
-  }
+    document.body.classList.add("overflow-hidden");
+  };
 
   const closeModal = () => {
     setIsModalShowing(!isModalShowing);
-    document.body.classList.remove('overflow-hidden');
-  }
-  
+    document.body.classList.remove("overflow-hidden");
+  };
+
   return (
     <>
       <Navbar openModal={openModal} />
@@ -25,6 +25,7 @@ const App = () => {
       <div className="">
         <div className="md:container mx-auto bg-gray-950">
           <Header />
+          <Carousel />
           <Bio />
         </div>
       </div>
