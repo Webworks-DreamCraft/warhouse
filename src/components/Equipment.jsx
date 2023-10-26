@@ -86,7 +86,7 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
         </h2>
         <img className="my-10" src={chain} />
         <section className="flex flex-col md:flex-row items-center md:w-full">
-          <section className="w-full flex flex-col items-center md:items-start md:w-1/2">
+          <section className="w-full flex flex-col items-center md:items-start mb-8 md:mb-0 md:w-1/2">
             <h2 className="hidden md:block text-4xl font-bold font-libre-franklin mb-6">
               Amps and Cabinets
             </h2>
