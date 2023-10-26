@@ -10,8 +10,8 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
   const [showMoreAmps, setShowMoreAmps] = useState(false);
 
   const ampsCabinetsDisplay = ampsCabinets
-    ? ampsCabinets.slice(0, 6).map((instrument) => (
-        <section className="flex h-12 flex-row items-center">
+    ? ampsCabinets.slice(0, 6).map((instrument, i) => (
+        <section key={i} className="flex h-12 flex-row items-center">
           <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
           <p className="first:mt-0 last:mb-0 mt-3">{instrument}</p>
         </section>
@@ -20,8 +20,8 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
 
   const showMoreAmpsDisplay =
     ampsCabinets && showMoreAmps
-      ? ampsCabinets.slice(6).map((instrument) => (
-          <section className="flex h-12 flex-row items-center">
+      ? ampsCabinets.slice(6).map((instrument, i) => (
+          <section key={i} className="flex h-12 flex-row items-center">
             <img
               className="mt-4 mx-3 md:mr-3 md:mx-0"
               src="/unionForList.svg"
@@ -32,8 +32,8 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
       : null;
 
   const instrumentsDisplay = instruments
-    ? instruments.slice(0, 6).map((instrument) => (
-        <section className="flex flex-row items-center">
+    ? instruments.slice(0, 6).map((instrument, i) => (
+        <section key={i} className="flex flex-row items-center">
           <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
           <p className="first:mt-0 last:mb-0 mt-3">{instrument}2</p>
         </section>
@@ -42,8 +42,8 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
 
   const showMoreInstrumentsDisplay =
     instruments && showMoreInstruments
-      ? instruments.slice(6).map((instrument) => (
-          <section className="flex flex-row items-center">
+      ? instruments.slice(6).map((instrument, i) => (
+          <section key={i} className="flex flex-row items-center">
             <img
               className="mt-4 mx-3 md:mr-3 md:mx-0"
               src="/unionForList.svg"
