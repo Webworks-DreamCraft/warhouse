@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import chain from "/largeChain.svg"
 import instrument from "/instrument.png";
-import Chain from "./svg/Chain"
 import amp from "/amp.png";
 import target from "/target2.svg";
 
@@ -34,6 +33,7 @@ const Equipment = () => {
     fetchGear();
   }, []);
 
+  
   return (
     <section className="text-gray-50 flex justify-center items-center">
       <section className="w-11/12 md:w-full flex flex-col items-center md:items-start">
@@ -63,36 +63,18 @@ const Equipment = () => {
               <section className=" columns-2 ">
                 {!ampsCabinets
                   ? null
-                  : ampsCabinets.slice(0, 6).map((instrument) => {
-                      return (
-                        <section className="flex h-12 flex-row items-center">
-                          <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
-                          <p className="first:mt-0 last:mb-0 mt-3">
-                            {instrument}
-                          </p>
-                        </section>
-                      );
-                    })}
+                  : ampsCabinetsDisplay}
               </section>
               <section className="mb-3 columns-2 ">
                 {showMoreAmps && ampsCabinets
-                  ? ampsCabinets.slice(6).map((instrument) => {
-                      return (
-                        <section className="flex h-12 flex-row items-center">
-                          <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
-                          <p className="first:mt-0 last:mb-0 mt-3">
-                            {instrument}
-                          </p>
-                        </section>
-                      );
-                    })
+                  ? showMoreAmpsDisplay
                   : null}
               </section>
             </section>
             {showMoreAmps ? null : (
               <button
-                onClick={() => setShowMoreAmps(!showMoreAmps)}
-                className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 md:py-2 px-[10px] md:px-3 md:ml-3"
+              onClick={() => setShowMoreAmps(!showMoreAmps)}
+              className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 md:py-2 px-[10px] md:px-3 md:ml-3"
               >
                 Show All
               </button>
@@ -112,36 +94,18 @@ const Equipment = () => {
               <section className="columns-2 ">
                 {!instruments
                   ? null
-                  : instruments.slice(0, 6).map((instrument) => {
-                      return (
-                        <section className="flex flex-row items-center">
-                          <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
-                          <p className="first:mt-0 last:mb-0 mt-3">
-                            {instrument}2
-                          </p>
-                        </section>
-                      );
-                    })}
+                  : instrumentsDisplay}
               </section>
               <section className="mb-3 columns-2 ">
                 {showMoreInstruments && instruments
-                  ? instruments.slice(6).map((instrument) => {
-                      return (
-                        <section className="flex flex-row items-center">
-                          <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
-                          <p className="first:mt-0 last:mb-0 mt-3">
-                            {instrument}
-                          </p>
-                        </section>
-                      );
-                    })
+                  ? showMoreInstrumentsDisplay
                   : null}
               </section>
             </section>
             {!instruments ? null : !(instruments.length > 6) ? null : (
               <button
-                onClick={() => setShowMoreInstruments(!showMoreInstruments)}
-                className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 px-[10px]"
+              onClick={() => setShowMoreInstruments(!showMoreInstruments)}
+              className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 px-[10px]"
               >
                 Show All
               </button>
@@ -158,9 +122,38 @@ const Equipment = () => {
 
 export default Equipment;
 
-// see what api info looks like
-// get full list
-// map through items adding to counter, if counter === 6, stop
-// view more adds +1 to counter, map lists all of the list
+const ampsCabinetsDisplay = ampsCabinets.slice(0, 6).map((instrument) => (
+    <section className="flex h-12 flex-row items-center">
+      <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
+      <p className="first:mt-0 last:mb-0 mt-3">
+        {instrument}
+      </p>
+    </section>
+  ))
 
-// https://sheets.googleapis.com/v4/spreadsheets/1BPi6agZ8LvgqIyPh9g1zKpA_zJYSp1TezKURX17CXkA/values/Sheet1?valueRenderOption=FORMATTED_VALUE&majorDimension=COLUMNS&key=AIzaSyCIVKqeabMp_apNVSoAX7QmP955srg93xA
+const showMoreAmpsDisplay = ampsCabinets.slice(6).map((instrument) => (
+    <section className="flex h-12 flex-row items-center">
+      <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
+      <p className="first:mt-0 last:mb-0 mt-3">
+        {instrument}
+      </p>
+    </section>
+  ));
+
+  const instrumentsDisplay = instruments.slice(0, 6).map((instrument) => (
+      <section className="flex flex-row items-center">
+        <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
+        <p className="first:mt-0 last:mb-0 mt-3">
+          {instrument}2
+        </p>
+      </section>
+    ));
+
+  const showMoreInstrumentsDisplay = instruments.slice(6).map((instrument) => (
+      <section className="flex flex-row items-center">
+        <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
+        <p className="first:mt-0 last:mb-0 mt-3">
+          {instrument}
+        </p>
+      </section>
+    ));
