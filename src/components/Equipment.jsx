@@ -1,42 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import chain from "/largeChain.svg";
 import instrument from "/instrument.png";
 import amp from "/amp.png";
 import target from "/target2.svg";
 
-const Equipment = () => {
-  const [instruments, setInstruments] = useState();
+const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
+  
   const [showMoreInstruments, setShowMoreInstruments] = useState(false);
-
-  const [ampsCabinets, setAmpsCabinets] = useState();
   const [showMoreAmps, setShowMoreAmps] = useState(false);
-
-  const [errorMessage, setErrorMessage] = useState();
-
-  const API_URL = `https://sheets.googleapis.com/v4/spreadsheets/${
-    import.meta.env.VITE_SHEETS_ID
-  }/values/Sheet1?valueRenderOption=FORMATTED_VALUE&majorDimension=COLUMNS&key=${
-    import.meta.env.VITE_SHEETS_KEY
-  }`;
-
-  useEffect(() => {
-    const fetchGear = async () => {
-      try {
-        const response = await fetch(API_URL);
-        const data = await response.json();
-        if (response.ok) {
-          setInstruments(data.values[0]);
-          setAmpsCabinets(data.values[1]);
-          setErrorMessage(null);
-        } else {
-        setErrorMessage("Something went wrong retrieving the list");
-        }
-      } catch (err) {
-        setErrorMessage("Something went wrong retrieving the list");
-      }
-    };
-    fetchGear();
-  }, []);
 
   const ampsCabinetsDisplay = ampsCabinets
     ? ampsCabinets.slice(0, 6).map((instrument) => (
@@ -82,6 +53,24 @@ const Equipment = () => {
         ))
       : null;
 
+  const showMoreAmpsButton = showMoreAmps ? null : (
+    <button
+      onClick={() => setShowMoreAmps(!showMoreAmps)}
+      className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 md:py-2 px-[10px] md:px-3 md:ml-3"
+    >
+      Show All
+    </button>
+  )
+
+  const showMoreInstrumentsButton = !instruments ? null : !(instruments.length > 6) ? null : (
+    <button
+      onClick={() => setShowMoreInstruments(!showMoreInstruments)}
+      className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 px-[10px]"
+    >
+      Show All
+    </button>
+  )
+
   return (
     <section id="gear" className="text-gray-50 flex justify-center items-center">
       <section className="w-11/12 md:w-full flex flex-col items-center md:items-start">
@@ -114,14 +103,7 @@ const Equipment = () => {
                 {showMoreAmpsDisplay}
               </section>
             </section>
-            {showMoreAmps ? null : (
-              <button
-                onClick={() => setShowMoreAmps(!showMoreAmps)}
-                className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 md:py-2 px-[10px] md:px-3 md:ml-3"
-              >
-                Show All
-              </button>
-            )}
+            {showMoreAmpsButton}
           </section>
           <section className="md:w-1/2">
             <img src={amp} />
@@ -140,14 +122,7 @@ const Equipment = () => {
                 {showMoreInstrumentsDisplay}
               </section>
             </section>
-            {!instruments ? null : !(instruments.length > 6) ? null : (
-              <button
-                onClick={() => setShowMoreInstruments(!showMoreInstruments)}
-                className="hover:border-warhouse-red text-xs font-libre-basker border-[1px] border-gray-50 rounded-sm py-1 px-[10px]"
-              >
-                Show All
-              </button>
-            )}
+            {showMoreInstrumentsButton}
           </section>
           <section className="md:w-1/2">
             <img src={instrument} />
