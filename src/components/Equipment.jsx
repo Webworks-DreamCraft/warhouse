@@ -3,7 +3,7 @@ import chain from "/largeChain.svg"
 import instrument from "/instrument.png";
 import Chain from "./svg/Chain"
 import amp from "/amp.png";
-import target from "/target.svg";
+import target from "/target2.svg";
 
 const Equipment = () => {
   const [instruments, setInstruments] = useState();
@@ -13,7 +13,7 @@ const Equipment = () => {
   const [showMoreAmps, setShowMoreAmps] = useState(false);
 
   const API_URL =
-    "https://sheets.googleapis.com/v4/spreadsheets/1BPi6agZ8LvgqIyPh9g1zKpA_zJYSp1TezKURX17CXkA/values/Sheet1?valueRenderOption=FORMATTED_VALUE&majorDimension=COLUMNS&key=AIzaSyCIVKqeabMp_apNVSoAX7QmP955srg93xA";
+    `https://sheets.googleapis.com/v4/spreadsheets/1BPi6agZ8LvgqIyPh9g1zKpA_zJYSp1TezKURX17CXkA/values/Sheet1?valueRenderOption=FORMATTED_VALUE&majorDimension=COLUMNS&key=${import.meta.env.VITE_SHEETS_KEY}`;
 
   useEffect(() => {
     const fetchGear = async () => {
@@ -37,29 +37,19 @@ const Equipment = () => {
   return (
     <section className="text-gray-50 flex justify-center items-center">
       <section className="w-11/12 md:w-full flex flex-col items-center md:items-start">
-        <h2 className="relative hidden px-7 pt-5 mb-5 md:inline-block font-libre-franklin text-2xl font-bold xxs:text-4xl sm:text-7xl sm:pl-0 sm:pr-14 sm:pt-11">
+      <h2 className="relative px-7 pt-5 mb-5 mt-5 inline-block font-libre-franklin text-2xl font-bold xxs:text-4xl sm:text-5xl sm:pl-0 sm:pr-10 sm:pt-8 lg:text-7xl lg:pr-14 lg:pt-12">
           <img
             src={target}
-            className="absolute top-0 right-0 max-w-[45px] sm:max-w-[90px]"
+            className="absolute top-0 right-0 max-w-[45px] sm:max-w-[60px] lg:max-w-[90px]"
           />
-          FEATURED EQUIPMENT
-        </h2>
-        <h2 className="md:hidden relative px-7 pt-5 inline-block font-libre-franklin text-2xl font-bold xxs:text-4xl sm:text-7xl sm:pl-0 sm:pr-14 sm:pt-11">
-          <img
-            src={target}
-            className="absolute top-0 right-0 max-w-[45px] sm:max-w-[90px]"
-          />
-          FEATURED
-        </h2>
-        <h1 className="md:hidden px-7 mb-5 inline-block font-libre-franklin text-2xl font-bold xxs:text-4xl sm:text-7xl sm:pl-0 sm:pr-14 sm:pt-11">
-          EQUIPMENT
-        </h1>
+        EQUIPMENT
+      </h2>
         <h2 className="font-libre-basker text-center text-lg">
           Additional gear information is available upon request
         </h2>
-        <img className="mt-10" src={chain} />
-        <section className="flex flex-col my-10 md:flex-row items-center md:w-full">
-          <section className="w-full flex flex-col my-6 items-center md:items-start md:w-1/2">
+        <img className="my-10" src={chain} />
+        <section className="flex flex-col md:flex-row items-center md:w-full">
+          <section className="w-full flex flex-col items-center md:items-start md:w-1/2">
             <h2 className="hidden md:block text-4xl font-bold font-libre-franklin mb-6">
               Amps and Cabinets
             </h2>
@@ -69,7 +59,7 @@ const Equipment = () => {
             <h2 className="md:hidden text-4xl font-bold font-libre-franklin mb-6">
               Cabinets
             </h2>
-            <section className="font-libre-basker text-xs w-9/12">
+            <section className="font-libre-basker text-xs mb-8 sm:w-9/12">
               <section className=" columns-2 ">
                 {!ampsCabinets
                   ? null
@@ -112,22 +102,22 @@ const Equipment = () => {
             <img src={amp} />
           </section>
         </section>
-        <img src={chain} />
-        <section className="flex flex-col my-10 md:flex-row items-center md:w-full">
-          <section className="w-full flex flex-col my-6 items-center md:items-start md:w-1/2">
+        <img className="my-10" src={chain} />
+        <section className="flex flex-col md:flex-row items-center md:w-full">
+          <section className="w-full flex flex-col items-center md:items-start md:w-1/2">
             <h2 className="text-4xl font-bold font-libre-franklin mb-6">
               Instruments
             </h2>
-            <section className="font-libre-basker text-xs w-9/12">
+            <section className="font-libre-basker text-xs mb-8 sm:w-9/12">
               <section className="columns-2 ">
                 {!instruments
                   ? null
                   : instruments.slice(0, 6).map((instrument) => {
                       return (
-                        <section className="flex h-12 flex-row items-center">
+                        <section className="flex flex-row items-center">
                           <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
                           <p className="first:mt-0 last:mb-0 mt-3">
-                            {instrument}
+                            {instrument}2
                           </p>
                         </section>
                       );
@@ -137,7 +127,7 @@ const Equipment = () => {
                 {showMoreInstruments && instruments
                   ? instruments.slice(6).map((instrument) => {
                       return (
-                        <section className="flex h-12 flex-row items-center">
+                        <section className="flex flex-row items-center">
                           <img className="mt-4 mx-3 md:mr-3 md:mx-0" src="/unionForList.svg" />
                           <p className="first:mt-0 last:mb-0 mt-3">
                             {instrument}
