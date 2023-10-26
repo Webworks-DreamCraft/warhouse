@@ -83,7 +83,7 @@ const Equipment = () => {
       : null;
 
   return (
-    <section className="text-gray-50 flex justify-center items-center">
+    <section id="gear" className="text-gray-50 flex justify-center items-center">
       <section className="w-11/12 md:w-full flex flex-col items-center md:items-start">
         <h2 className="relative px-7 pt-5 mb-5 mt-5 inline-block font-libre-franklin text-2xl font-bold xxs:text-4xl sm:text-5xl sm:pl-0 sm:pr-10 sm:pt-8 lg:text-7xl lg:pr-14 lg:pt-12">
           <img
