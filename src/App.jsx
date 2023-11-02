@@ -17,9 +17,9 @@ const App = () => {
   const [isModalShowing, setIsModalShowing] = useState(false);
 
   const API_URL = `https://sheets.googleapis.com/v4/spreadsheets/${
-    import.meta.env.VITE_SHEETS_ID
+    import.meta.env.VITE_WARHOUND_SHEETS_ID
   }/values/Sheet1?valueRenderOption=FORMATTED_VALUE&majorDimension=COLUMNS&key=${
-    import.meta.env.VITE_SHEETS_KEY
+    import.meta.env.VITE_WARHOUND_SHEETS_KEY
   }`;
 
   useEffect(() => {
