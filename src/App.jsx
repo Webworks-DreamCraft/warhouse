@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar";
 import NavModal from "./components/NavModal";
 import Equipment from "./components/Equipment";
 import Carousel from "./components/Slider/Carousel";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
 
@@ -60,6 +62,12 @@ const App = () => {
           <Spotify />
           <Equipment instruments={instruments} ampsCabinets={ampsCabinets} errorMessage={errorMessage}/>
           <Bio />
+        </div>
+        <div>
+          <Contact />
+        </div>
+        <div className="md:container mx-auto bg-gray-950">
+          <Footer />
         </div>
       </div>
     </>

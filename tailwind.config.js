@@ -16,6 +16,7 @@ export default {
       },
       colors: {
         "warhouse-red": "#f21326",
+        "warhouse-gray": "#888",
       },
       listStyleImage: {
         square: 'url("/rectangle.svg")',
