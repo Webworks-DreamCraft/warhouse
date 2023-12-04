@@ -32,24 +32,25 @@ const NavModal = ({ isModalShowing, closeModal }) => (
               <a
                 onClick={closeModal}
                 className="mx-2 my-6 hover:marker:text-warhouse-red border-b-2 py-1 border-b-gray-50"
-                href="#location"
+                href="#gear"
               >
                 <li>Gear</li>
               </a>
               <a
                 onClick={closeModal}
                 className="mx-2 my-6 hover:marker:text-warhouse-red border-b-2 py-1 border-b-gray-50"
-                href="#portfolio"
+                href="#clients"
               >
                 <li>Clients</li>
               </a>
             </ul>
-            <button 
-              className="hover:border-warhouse-red border-2 border-gray-50 text-gray-50 rounded-sm p-2"
-              onClick={closeModal}
-            >
-              Contact
-            </button>
+             <a onClick={closeModal} className="flex justify-center align-center p-4 hover:border-warhouse-red border-2 border-gray-50 text-gray-50 rounded-sm p-2" href="#contact">
+              <button 
+                className="items-center"
+              >
+                Contact
+              </button>
+            </a>
           </section>
           <section className="flex justify-center">
           <a 

@@ -89,7 +89,18 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
       Show All
     </button>
   )
+  
+  const arrowIcon = (state) => {
+    return state ? 
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+            <path fillRule="evenodd" d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z" clipRule="evenodd" />
+          </svg> 
+          :
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+            <path fillRule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clipRule="evenodd" />
+          </svg>
 
+  }
   return (
     <section id="gear" className="text-gray-50 flex justify-center items-center">
       <section className="w-11/12 md:w-full flex flex-col items-center md:items-start">
@@ -110,7 +121,7 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
             <section className="font-libre-basker text-xs mb-8 sm:w-9/12 cursor-pointer " onMouseLeave={() => sethoverAmps(!hoverAmps)}  onMouseEnter={() => sethoverAmps(!hoverAmps)} onClick={() => handleEquipmentToggle(showAmps, setShowAmps)}>
                 {errorMessage}
               <h3 className={`text-2xl text-${showAmps ? 'warhouse-red' : ''} font-bold font-libre-franklin flex items-center hover:text-warhouse-red`}>
-                Amps 
+                Amps <span className="ml-2 mt-1">{arrowIcon(showAmps)}</span>
               </h3>
               <section className={`${showAmps ? 'mb-3' : 'hidden'}`}>
                 <section  className="flex flex-row">
@@ -168,7 +179,7 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
             <section className="font-libre-basker text-xs mb-8 sm:w-9/12 cursor-pointer" onMouseLeave={() => sethoverCabs(!hoverCabs)} onMouseEnter={() => sethoverAmps(!hoverCabs)} onClick={() => handleEquipmentToggle(showCabs, setShowCabs)}>
                 {errorMessage}
               <h3 className={`text-2xl text-${showAmps ? 'warhouse-red' : ''} font-bold font-libre-franklin flex items-center hover:text-warhouse-red`}>
-                Cabinets
+                Cabinets <span className="ml-2 mt-1">{arrowIcon(showCabs)}</span>
               </h3>
               <section className={`${showCabs ? 'mb-3' : 'hidden'}`}>
                 <section className={'flex flex-row'}>
@@ -223,10 +234,10 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
               </section>
             </section>
             
-            <section className="font-libre-basker text-xs mb-8 sm:w-9/12 cursor-pointer" onMouseLeave={() => sethoverDrums(!hoverPedals)} onMouseEnter={() => sethoverPedals(!hoverCabs)} onClick={() => handleEquipmentToggle(showDrums, setShowDrums)}>
+            <section className="font-libre-basker text-xs mb-8 sm:w-9/12 cursor-pointer" onMouseLeave={() => sethoverDrums(!hoverDrums)} onMouseEnter={() => sethoverPedals(!hoverDrums)} onClick={() => handleEquipmentToggle(showDrums, setShowDrums)}>
                 {errorMessage}
               <h3 className={`text-2xl text-${hoverPedals ? 'warhouse-red' : ''} font-bold font-libre-franklin flex items-center hover:text-warhouse-red`}>
-                Drums
+                Drums <span className="ml-2 mt-1">{arrowIcon(showDrums)}</span>
               </h3>
               <section className={`${showDrums ? 'mb-3' : 'hidden'}`}>
                 <section className={'flex flex-row'}>
@@ -298,7 +309,8 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
             <section className="font-libre-basker text-xs mb-8 sm:w-9/12 cursor-pointer" onMouseLeave={() => sethoverGuitars(!hoverGuitars)} onMouseEnter={() => sethoverGuitars(!hoverGuitars)} onClick={() => handleEquipmentToggle(showGuitars, setShowGuitars)}>
                 {errorMessage}
               <h3 className={`text-2xl text-${hoverGuitars ? 'warhouse-red' : ''} font-bold font-libre-franklin flex hover:text-warhouse-red`}>
-                Guitars
+                Guitars 
+                <span className="ml-2 mt-1">{arrowIcon(showGuitars)}</span>
               </h3>
               <section className={`${showGuitars ? 'mb-3' : 'hidden'}`}>
                 <section className={'flex flex-row'}>
@@ -356,9 +368,13 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
 
             <section className="font-libre-basker text-xs mb-8 sm:w-9/12 cursor-pointer" onMouseLeave={() => sethoverPedals(!hoverPedals)} onMouseEnter={() => sethoverPedals(!hoverPedals)} onClick={() => handleEquipmentToggle(showPedals, setShowPedals)}>
                 {errorMessage}
+              <div>
+
               <h3 className={`text-2xl text-${hoverPedals ? 'warhouse-red' : ''} font-bold font-libre-franklin flex hover:text-warhouse-red`}>
-                Pedals
+                Pedals <span className="ml-2 mt-1">{arrowIcon(showPedals)}</span>
               </h3>
+
+              </div>
               <section className={`${showPedals ? 'mb-3' : 'hidden'}`}>
                 <section className={'flex flex-row'}>
                   <img
