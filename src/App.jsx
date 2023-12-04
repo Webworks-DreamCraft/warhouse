@@ -22,24 +22,25 @@ const App = () => {
     import.meta.env.VITE_WARHOUND_SHEETS_KEY
   }`;
 
-  useEffect(() => {
-    const fetchGear = async () => {
-      try {
-        const response = await fetch(API_URL);
-        const data = await response.json();
-        if (response.ok) {
-          setInstruments(data.values[0]);
-          setAmpsCabinets(data.values[1]);
-          setErrorMessage(null);
-        } else {
-        setErrorMessage("Something went wrong retrieving the list");
-        }
-      } catch (err) {
-        setErrorMessage("Something went wrong retrieving the list");
-      }
-    };
-    fetchGear();
-  }, []);
+  // TODO: fix this google sheet. 
+  // useEffect(() => {
+  //   const fetchGear = async () => {
+  //     try {
+  //       const response = await fetch(API_URL);
+  //       const data = await response.json();
+  //       if (response.ok) {
+  //         setInstruments(data.values[0]);
+  //         setAmpsCabinets(data.values[1]);
+  //         setErrorMessage(null);
+  //       } else {
+  //       setErrorMessage("Something went wrong retrieving the list");
+  //       }
+  //     } catch (err) {
+  //       setErrorMessage("Something went wrong retrieving the list");
+  //     }
+  //   };
+  //   fetchGear();
+  // }, []);
 
   const openModal = () => {
     setIsModalShowing(!isModalShowing);
