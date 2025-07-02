@@ -1,7 +1,5 @@
 import Union from "./svg/Union";
 import Circle from "./svg/Circle";
-import headerImage1 from "/header1.jpeg";
-import headerImage1b from "/header1b.png";
 import headerImage1c from "/header1c.png";
 import headerImage2 from "/header2.png";
 
