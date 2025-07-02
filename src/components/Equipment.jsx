@@ -129,7 +129,14 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
                     className="mt-4 mx-3 md:mr-3 md:mx-0"
                     src="/unionForList.svg"
                   />
-                  <p className="first:mt-0 last:mb-0 mt-4">Marshall JCM900 with Mods</p>
+                  <p className="first:mt-0 last:mb-0 mt-4">Modded Marshall JCM900</p>
+                </section>
+                <section  className="flex flex-row">
+                  <img
+                    className="mt-4 mx-3 md:mr-3 md:mx-0"
+                    src="/unionForList.svg"
+                  />
+                  <p className="first:mt-0 last:mb-0 mt-4">Bad Cat Cub 40R</p>
                 </section>
                 <section  className="flex flex-row">
                   <img
@@ -143,7 +150,7 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
                     className="mt-4 mx-3 md:mr-3 md:mx-0"
                     src="/unionForList.svg"
                   />
-                  <p className="first:mt-0 last:mb-0 mt-4">Mesa Dual Rectifier (3 channel)</p>
+                   <p className="first:mt-0 last:mb-0 mt-4">Mesa Dual Rectifier</p>
                 </section>
                 <section  className="flex flex-row">
                   <img
@@ -157,21 +164,7 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
                     className="mt-4 mx-3 md:mr-3 md:mx-0"
                     src="/unionForList.svg"
                   />
-                   <p className="first:mt-0 last:mb-0 mt-4">Marshall JCM2000</p>
-                </section>
-                <section  className="flex flex-row">
-                  <img
-                    className="mt-4 mx-3 md:mr-3 md:mx-0"
-                    src="/unionForList.svg"
-                  />
-                  <p className="first:mt-0 last:mb-0 mt-4">Crate Blue Voodoo with Mods</p>
-                </section>
-                <section  className="flex flex-row">
-                  <img
-                    className="mt-4 mx-3 md:mr-3 md:mx-0"
-                    src="/unionForList.svg"
-                  />
-                  <p className="first:mt-0 last:mb-0 mt-4">Peavey Bass Vintage Head</p>
+                  <p className="first:mt-0 last:mb-0 mt-4">Marshall JCM2000</p>
                 </section>
               </section>
             </section>
@@ -187,6 +180,13 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
                     className="mt-4 mx-3 md:mr-3 md:mx-0"
                     src="/unionForList.svg"
                   />
+                  <p className="first:mt-0 last:mb-0 mt-4">Mesa Oversized 412</p>
+                </section>
+                <section  className="flex flex-row">
+                  <img
+                    className="mt-4 mx-3 md:mr-3 md:mx-0"
+                    src="/unionForList.svg"
+                  />
                   <p className="first:mt-0 last:mb-0 mt-4">Mesa Traditional 412</p>
                 </section>
                 <section  className="flex flex-row">
@@ -194,21 +194,7 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
                     className="mt-4 mx-3 md:mr-3 md:mx-0"
                     src="/unionForList.svg"
                   />
-                  <p className="first:mt-0 last:mb-0 mt-4">Marshall 1960a 412</p>
-                </section>
-                <section  className="flex flex-row">
-                  <img
-                    className="mt-4 mx-3 md:mr-3 md:mx-0"
-                    src="/unionForList.svg"
-                  />
-                  <p className="first:mt-0 last:mb-0 mt-4">Framus Cobra 412 with Mods</p>
-                </section>
-                <section  className="flex flex-row">
-                  <img
-                    className="mt-4 mx-3 md:mr-3 md:mx-0"
-                    src="/unionForList.svg"
-                  />
-                   <p className="first:mt-0 last:mb-0 mt-4">Harley Benton 212 with Mods</p>
+                  <p className="first:mt-0 last:mb-0 mt-4">Framus Cobra 412</p>
                 </section>
                 <section  className="flex flex-row">
                   <img
@@ -222,14 +208,7 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
                     className="mt-4 mx-3 md:mr-3 md:mx-0"
                     src="/unionForList.svg"
                   />
-                  <p className="first:mt-0 last:mb-0 mt-4">Peavey Bass 215</p>
-                </section>
-                <section  className="flex flex-row">
-                  <img
-                    className="mt-4 mx-3 md:mr-3 md:mx-0"
-                    src="/unionForList.svg"
-                  />
-                  <p className="first:mt-0 last:mb-0 mt-4">Eden 210 XLT</p>
+                   <p className="first:mt-0 last:mb-0 mt-4">Ampeg 810e</p>
                 </section>
               </section>
             </section>
@@ -332,7 +311,14 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
                     className="mt-4 mx-3 md:mr-3 md:mx-0"
                     src="/unionForList.svg"
                   />
-                  <p className="first:mt-0 last:mb-0 mt-4">Fender Stratocaster</p>
+                  <p className="first:mt-0 last:mb-0 mt-4">Charvel Pro-Mod</p>
+                </section>
+                <section  className="flex flex-row">
+                  <img
+                    className="mt-4 mx-3 md:mr-3 md:mx-0"
+                    src="/unionForList.svg"
+                  />
+                   <p className="first:mt-0 last:mb-0 mt-4">Fender Stratocaster</p>
                 </section>
                 <section  className="flex flex-row">
                   <img
@@ -346,21 +332,14 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
                     className="mt-4 mx-3 md:mr-3 md:mx-0"
                     src="/unionForList.svg"
                   />
-                   <p className="first:mt-0 last:mb-0 mt-4">BC Rich Warlock</p>
+                  <p className="first:mt-0 last:mb-0 mt-4">BC Rich Wralock</p>
                 </section>
                 <section  className="flex flex-row">
                   <img
                     className="mt-4 mx-3 md:mr-3 md:mx-0"
                     src="/unionForList.svg"
                   />
-                  <p className="first:mt-0 last:mb-0 mt-4">18x18 Floor Tom</p>
-                </section>
-                <section  className="flex flex-row">
-                  <img
-                    className="mt-4 mx-3 md:mr-3 md:mx-0"
-                    src="/unionForList.svg"
-                  />
-                  <p className="first:mt-0 last:mb-0 mt-4">Fender Jazz Bass USA Player Series</p>
+                  <p className="first:mt-0 last:mb-0 mt-4">FenderJazz Bass USA</p>
                 </section>
                 
               </section>
@@ -493,7 +472,7 @@ const Equipment = ({ instruments, ampsCabinets, errorMessage }) => {
                     className="mt-4 mx-3 md:mr-3 md:mx-0"
                     src="/unionForList.svg"
                   />
-                  <p className="first:mt-0 last:mb-0 mt-4">Blackout Effectors Fix’d Fuzz Deluxe</p>
+                  <p className="first:mt-0 last:mb-0 mt-4">Blackout Effectors Fix'd Fuzz Deluxe</p>
                 </section>
                 <section  className="flex flex-row">
                   <img

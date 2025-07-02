@@ -1,6 +1,8 @@
 import Union from "./svg/Union";
 import Circle from "./svg/Circle";
-import headerImage1 from "/header1.png";
+import headerImage1 from "/header1.jpeg";
+import headerImage1b from "/header1b.png";
+import headerImage1c from "/header1c.png";
 import headerImage2 from "/header2.png";
 
 const Header = () => (
@@ -35,7 +37,8 @@ const Header = () => (
     </a>
     <section className="flex justify-between w-11/12 md:w-full">
       <section>
-        <img className="md:w-full" src={headerImage1} />
+        <img className="md:w-full" src={headerImage1c} />
+        {/* <img className="md:w-full" src={headerImage1c} /> */}
       </section>
       <section className="hidden md:flex w-10"></section>
       <section>

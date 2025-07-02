@@ -16,10 +16,6 @@ const Footer = () => {
               Warhouserecordings@gmail.com
             </a>
           </p>
-          <p className="font-libre-franklin font-bold text-xs">Address</p>
-          <p className="font-libre-basker text-[10px]">
-            533 NW 32nd Ave Gainesville, FL 32609
-          </p>
         </div>
         <div className="hidden md:block md:w-1/3">
           <ul className="font-libre-franklin text-xs flex list-none justify-around max-w-[190px] mx-auto sm:pb-1">
