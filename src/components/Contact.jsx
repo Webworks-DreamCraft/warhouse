@@ -25,7 +25,7 @@ const Contact = () => {
                 target="_blank"
                 className="hover:text-warhouse-red"
               >
-                Warhouserecordings@gmail.com
+                warhouserecording@gmail.com
               </a>
             </p>
           </div>
